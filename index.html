@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>Pumpkin ($Pumpkin) - A Warm, Orange Crypto Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="Images/Background.jpg"/>
+    <!-- Three.js, OrbitControls, GSAP -->
+    <script src="https://unpkg.com/three@0.150.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.150.0/examples/jsm/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+</head>
+<body>
+    <div class="bg-decorations"></div>
+    <header class="hero-section">
+        <canvas id="three-canvas"></canvas>
+        <canvas id="hero-canvas"></canvas>
+        <h1>ChatGPT Hamster ($Pumpkin)</h1>
+        <p>Empower Your Crypto Journey with $Pumpkin</p>
+        <button id="explore-btn">Explore</button>
+    </header>
+
+    <nav class="sticky-navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#story">Story</a></li>
+            <li><a href="#token-tracker">Live Tracker</a></li>
+            <li><a href="#community">Community</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2 class="container-heading">Coming Soon!</h2>
+        <p class="container-intro">Stay tuned for more, fun content!</p>
+        <canvas id="container-3d-canvas"></canvas>
+
+        <section id="about" class="section">
+            <h2>About Pumpkin</h2>
+            <p>$Pumpkin is a community-driven cryptocurrency inspired by the ChatGPT Mascot, Pumpkin. It aims to foster collaboration and a friendly atmosphere in the crypto world.</p>
+        </section>
+
+        <section id="story" class="section">
+            <h2>The Story of Pumpkin</h2>
+            <p>
+                Pumpkin was originally a hamster adored by ChatGPT, first seen in an 
+                <a href="https://www.instagram.com/p/DC5I2UoSqMD/" target="_blank">Instagram post</a>. 
+                The community named this beloved hamster "Pumpkin." ChatGPT shared the official naming in this 
+                <a href="https://www.instagram.com/chatgpt/p/DDFmCR3SX3M/?img_index=2" target="_blank">post</a>.
+            </p>
+            <div class="story-images">
+                <img src="Images/InstagramStory1.png" alt="Original Hamster Post">
+                <img src="Images/NamePoll.jpg" alt="Name Poll">
+                <img src="Images/NameAnnouncement.jpg" alt="Name Announcement">
+            </div>
+        </section>
+
+        <section class="section images-section">
+            <h2>Pumpkin Mascot Graphics</h2>
+            <img src="Images/Main.jpg" alt="Pumpkin Hamster 1">
+            <img src="Images/Celebrate.jpg" alt="Pumpkin Hamster 2">
+            <img src="Images/Dance.jpg" alt="Pumpkin Hamster 3">
+            <img src="Images/Pumpkin.jpg" alt="Pumpkin Hamster 4">
+        </section>
+
+        <section id="token-tracker" class="section">
+            <h2>Live Price Tracker</h2>
+            <p class="price-tracker">Current Price: <span id="price">Loading...</span></p>
+            <a href="https://dexscreener.com/solana/av4jiispdyf5scsdz4f6coiqn9xgsmdnqthqa9u5mywg" target="_blank">
+                <img src="Images/DexscreenerLogo.png" alt="Dexscreener" class="dexscreener-logo">
+            </a>
+            <p>
+                Contract Address: 
+                <span id="contract-address" onclick="copyToClipboard()">
+                    3J4BuoMSVQT5t6ZYRHtij1Re9NZYYLoYcb9gqkCJpump
+                </span>
+                <span id="copy-confirmation">Copied!</span>
+            </p>
+        </section>
+
+        <section id="community" class="section">
+            <h2>Join the Pumpkin Community</h2>
+            <div class="cta-buttons">
+                <a href="https://t.me/ChatgptPumpkinportal" target="_blank">Join Telegram</a>
+                <a href="https://x.com/pumpkinchatgpt" target="_blank">Follow on X</a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>Disclaimer: This is a community-driven project inspired by ChatGPT content and is not officially affiliated with ChatGPT or OpenAI. This project does not guarantee any returns. Please conduct thorough research (DYOR) and make investment decisions responsibly.</p>
+        <p>
+            Contract Address: 
+            <span id="contract-address" onclick="copyToClipboard()">
+                3J4BuoMSVQT5t6ZYRHtij1Re9NZYYLoYcb9gqkCJpump
+            </span>
+            <span id="copy-confirmation">Copied!</span>
+        </p>
+    </footer>
+
+    <canvas id="bg-canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
