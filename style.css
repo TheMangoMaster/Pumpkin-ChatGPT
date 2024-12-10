@@ -5,8 +5,13 @@ html, body {
 }
 body {
     font-family: 'Comic Sans MS', sans-serif;
-    background: linear-gradient(to bottom, #a35200 0%, #e69500 100%) fixed no-repeat;
+    /* Fallback solid color */
+    background-color: #a35200;
+    /* Gradient as background-image */
+    background-image: linear-gradient(to bottom, #a35200 0%, #e69500 100%);
+    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     color: #f5f2ea;
     min-height: 100%;
     overflow-x: hidden;
