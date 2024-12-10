@@ -18,6 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             const price = data.pairs && data.pairs.length > 0 ? data.pairs[0].priceUsd : null;
             document.getElementById('price').innerText = price ? `$${price}` : "Data Unavailable";
+
+            // Update the document title with the live price
+            if (price) {
+                document.title = `$Pumpkin $${price}`;
+            } else {
+                document.title = '$Pumpkin - Data Unavailable';
+            }
         })
         .catch(error => console.error('Error fetching price:', error));
 
